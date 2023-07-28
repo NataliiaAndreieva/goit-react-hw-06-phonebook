@@ -49,6 +49,8 @@ export const Button = styled.button`
 `;
 
 export const Contacts = styled.li`
-
-
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 10px;
 `;
