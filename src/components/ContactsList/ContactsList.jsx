@@ -17,12 +17,10 @@ const ContactsList = () => {
             id={id}
             name={contactName}
             number={contactNumber}
-            
           />
         ))}
       </ul>
     );
 };
-
 
 export default ContactsList;

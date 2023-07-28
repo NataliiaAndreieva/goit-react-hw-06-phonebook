@@ -6,12 +6,10 @@ import { selectContacts } from "redux/selectors";
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { nanoid } from 'nanoid';
 
-
 function Form() {
   const contacts = useSelector(selectContacts);
   const dispatch = useDispatch();
 
- 
   const handleSubmit = e => {
     e.preventDefault();
 
@@ -23,13 +21,11 @@ function Form() {
     if (!contacts.length || !contacts.some(
       contact => contact.contactNamber === contactNumber
     ))
-   
     {
       const newContact = {
         id: nanoid(),
         contactName,
         contactNumber,
-    
       };
       dispatch(addNewContacts(newContact));
       form.reset();
@@ -50,14 +46,12 @@ function Form() {
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             required
             value={contacts.name}
-            // onChange={handleInputChange}
           />
         </label>
 
         <label>
           Number
           <input
-            // onChange={handleInputChange}
             type="tel"
             name="number"
             value={contacts.number}
@@ -68,9 +62,7 @@ function Form() {
           />
         </label>
         <Button
-          type="submit"
-         
-        >
+          type="submit">
           Add contact
         </Button>
       </Container>

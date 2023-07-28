@@ -3,7 +3,6 @@ import { Button, Contacts } from './ContactsListItem.styled';
 import { useDispatch } from 'react-redux';
 import { deleteIdContact } from 'redux/contactsSlice';
 
-
 const ContactsListItem = ({ id, name, number }) => {
   const dispatch = useDispatch();
 
@@ -16,7 +15,6 @@ const ContactsListItem = ({ id, name, number }) => {
       <p>
         {name[0].toLowerCase() + name.substring(1)} <span>{number}</span>
       </p>
-
       <Button type="button" onClick={() => deleteContact(id)}>
         Delete
       </Button>
@@ -28,7 +26,6 @@ ContactsListItem.propTypes = {
   name: PropTypes.string.isRequired,
   number: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
- 
 };
 
 export default ContactsListItem;

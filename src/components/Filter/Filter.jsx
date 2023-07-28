@@ -1,5 +1,4 @@
 import React from "react";
-
 import { useDispatch, useSelector } from "react-redux";
 import { selectFilter } from "redux/selectors";
 import { filterContacts } from "redux/contactsSlice";
@@ -20,6 +19,5 @@ return (
     </label>
 );
 };
-
 
 export default Filter;

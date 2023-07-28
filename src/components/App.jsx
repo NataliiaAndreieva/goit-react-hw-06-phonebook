@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Form from "./Form";
 import Filter from "./Filter";
 import ContactsList from "./ContactsList";
