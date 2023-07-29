@@ -19,7 +19,7 @@ function Form() {
     const contactNumber = number.value;
 
     if (!contacts.length || !contacts.some(
-      contact => contact.contactNamber === contactNumber
+      contact => contact.contactNumber === contactNumber
     ))
     {
       const newContact = {
@@ -29,9 +29,9 @@ function Form() {
       };
       dispatch(addNewContacts(newContact));
       form.reset();
-      Notify.success(`{contactNumber} contact added`);
+      Notify.success(`${contactNumber} contact added`);
     } else {
-      Notify.warning(`{contactNumber} is already in contacts`);
+      Notify.warning(`${contactNumber} is already in contacts`);
     }
   };
 
